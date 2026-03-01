@@ -1,0 +1,58 @@
+<application>
+  <component name="ActionsLocalSummary">
+    <e n="$Delete">
+      <i c="29" l="1772370623852" />
+    </e>
+    <e n="$Undo">
+      <i c="7" l="1772299330558" />
+    </e>
+    <e n="EditorBackSpace">
+      <i c="48" l="1772371567743" />
+    </e>
+    <e n="EditorChooseLookupItem">
+      <i c="2" l="1772299137526" />
+    </e>
+    <e n="EditorCopy">
+      <i c="16" l="1772303721435" />
+    </e>
+    <e n="EditorDown">
+      <i c="5" l="1772370577961" />
+    </e>
+    <e n="EditorPaste">
+      <i c="1" l="1772290451969" />
+    </e>
+    <e n="EditorSplitLine">
+      <i c="2" l="1772299193545" />
+    </e>
+    <e n="GotoAction">
+      <i c="1" l="1772288885449" />
+    </e>
+    <e n="GotoDeclaration">
+      <i c="1" l="1772299118047" />
+    </e>
+    <e n="SaveAll">
+      <i c="3" l="1772303769229" />
+    </e>
+    <e n="ShowIntentionActions">
+      <i c="5" l="1772303707201" />
+    </e>
+    <e n="WelcomeScreen.CreateNewProject">
+      <i c="2" l="1772288915671" />
+    </e>
+    <e n="WelcomeScreen.OpenProject">
+      <i c="2" l="1772291536812" />
+    </e>
+    <e n="WelcomeScreen.Plugins">
+      <i c="1" d="1" l="1772288891898" k="1772288891898" />
+    </e>
+    <e n="WelcomeScreen.RemoveSelected">
+      <i c="1" l="1772291534638" />
+    </e>
+    <e n="com.intellij.openapi.fileEditor.impl.tabActions.CloseTab">
+      <i c="8" l="1772370614330" />
+    </e>
+    <e n="com.intellij.openapi.project.DumbAwareAction$SimpleDumbAwareAction">
+      <i c="1" l="1772288891881" />
+    </e>
+  </component>
+</application>

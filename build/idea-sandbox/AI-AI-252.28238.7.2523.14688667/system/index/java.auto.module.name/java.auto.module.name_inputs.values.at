@@ -1,0 +1,71 @@
+/Header Record For PersistentHashMapValueStorageannotationsabi.tools.apiannotations
+apkzlibaapt2.protoasm.analysisaaptcompilerasmasm.commonsbaseLibraryasm.utilasm.treeauto.value.annotationsbuilder.test.apiFastInfoset	apksigbuilder.modelchecker.qualbcutil.jdk18on	commoncommons.codecbcpkix.jdk18oncommons.loggingcrashcommons.compress	dagger
+commons.iodatabinding.commoncommons.lang3dvliberror.prone.annotationsfailureaccessflatbuffers.javafus.statistics.gradle.plugindatabinding.compiler.common	ddmlibgradle.base.services
+gradle.apigradle.base.services.groovygradle.common.apikotlin.reflectgradle.core.api gradle.core.kotlin.extensionsgradle.installation.beacongradle.kotlin.dsl.extensions# gradle.kotlin.dsl.shared.runtime# gradle.kotlin.dsl.tooling.modelsgradle.settings.apigradle.work.action.apigradle.kotlin.dsl
+groovy.antgroovy.astbuildergroovy.datetimegroovy.dateutilgroovy.groovydocgroovy.json
+groovy.niogroovy.templatesgradle.core
+groovy.xmlgsonhttpcorehttpmimeistack.commons.runtimej2objc.annotationsjakarta.activation.api
+httpclientjakarta.xml.bind.apijavapoet
+javawriterjavax.injectjavaparser.corejdom2jetifier.corejaxb.runtimeguavajetifier.processorjimfsjnajopt.simple	jsr305juniversalchardetkotlin.build.statisticskotlin.build.tools.apikotlin.compiler.runnerkotlin.daemon.clientbcprov.jdk18on	jose4j# kotlin.gradle.plugin.annotationsjna.platformkotlin.gradle.plugin.apikotlin.gradle.plugin.apikotlin.gradle.plugin.ideakotlin.gradle.plugin.modelkotlin.klib.commonizer.api"kotlin.gradle.plugin.idea.proto
+builder
+bundletoolkotlin.native.utilskotlin.tooling.core	gradlekotlin.util.iokotlin.util.klibkotlin.util.klib.metadatakxml2layoutlib.api	groovy
+lint.modelkotlinx.coroutines.core.jvmlint.typedef.removerlistenablefuturemanifest.mergerprotobuf.javaprotobuf.java.util	protos
+repositorykotlin.stdlib.jdk7kotlin.stdlib.jdk8kotlin.stdlibkotlin.stdlibkotlin.stdlib.jdk7kotlin.stdlib.jdk8kotlin.stdlib
+sdk.common	sdklibsignflinger	shared	slf4j.api
+stax.extensorflow.lite.metadata
+trackertxw2
+zipflingertinkkotlin.reflectkotlin.gradle.plugin
+gradle.api
+classes
+classesannotation.experimental
+classesannotation.jvmappcompat.resources
+classes
+collectioncore.runtime
+collection
+classesruntime.annotation.androidruntime.annotationactivityannotation.jvmconcurrent.futuresconcurrent.futures.ktx
+classesconcurrent.futures.ktxcardviewcore.commoncore.commonconcurrent.futures
+classescore.viewtree
+classes
+classescoordinatorlayoutcursoradapter
+classes
+classes
+classes
+customviewconstraintlayout
+classesdynamicanimation
+classes
+classesdrawerlayout
+classes
+classes
+classesgraphics.shapes.androidlifecycle.commonlifecycle.livedata.core
+classes
+classes
+classeslifecycle.commonlifecycle.runtime!lifecycle.viewmodel.savedstatecore.ktxfragment
+classeslifecycle.viewmodel
+classes
+classesnavigationevent.android
+classes resourceinspection.annotationnavigationevent resourceinspection.annotation	loader
+classes
+classesjunit
+savedstate
+classes
+classesespresso.idling.resourcerecyclerview
+classes
+storage
+classes
+tracing
+classes
+classes
+classes
+classes
+transitionvectordrawable.animated
+classes
+classesversionedparcelable
+classes
+classesvectordrawable
+monitor
+classes	viewpager
+viewpager2espresso.core
+classescore	jsr305	appcompaterror.prone.annotationserror.prone.annotations
+classeslistenablefuturelistenablefuturejavax.inject.1.sourceshamcrest.core	runnerkotlinx.coroutines.androidhamcrest.coreannotationsjspecifyannotationsjspecifyhamcrest.libraryhamcrest.librarycorejunitjunitcorekotlinx.coroutines.core.jvmkotlinx.coroutines.core.jvmkotlin.stdlibkotlin.stdlib
+classes
+android

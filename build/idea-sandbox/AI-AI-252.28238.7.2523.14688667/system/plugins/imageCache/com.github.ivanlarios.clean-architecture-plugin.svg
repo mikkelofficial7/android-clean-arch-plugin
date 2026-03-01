@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   version="1.1"
+   id="Layer_1"
+   x="0px"
+   y="0px"
+   width="100%"
+   viewBox="0 0 320 320"
+   enable-background="new 0 0 320 320"
+   xml:space="preserve"
+   sodipodi:docname="pluginIcon.svg"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><defs
+   id="defs500"><rect
+     x="69"
+     y="90.5"
+     width="191"
+     height="127.5"
+     id="rect4541" /><linearGradient
+     inkscape:collect="always"
+     id="linearGradient4483"><stop
+       style="stop-color:#ffff6e;stop-opacity:1;"
+       offset="0"
+       id="stop4479" /><stop
+       style="stop-color:#666600;stop-opacity:1;"
+       offset="0.52339178"
+       id="stop4481" /></linearGradient><linearGradient
+     inkscape:collect="always"
+     id="linearGradient4421"><stop
+       style="stop-color:#e04545;stop-opacity:1;"
+       offset="0"
+       id="stop4417" /><stop
+       style="stop-color:#601111;stop-opacity:1;"
+       offset="0.53216374"
+       id="stop4419" /></linearGradient><linearGradient
+     inkscape:collect="always"
+     id="linearGradient4354"><stop
+       style="stop-color:#4ce474;stop-opacity:1;"
+       offset="0"
+       id="stop4350" /><stop
+       style="stop-color:#0e4e1b;stop-opacity:1;"
+       offset="0.51754385"
+       id="stop4352" /></linearGradient><linearGradient
+     id="linearGradient1616"><stop
+       style="stop-color:#197fa8;stop-opacity:1;"
+       offset="0"
+       id="stop1622" /><stop
+       style="stop-color:#153884;stop-opacity:1;"
+       offset="0.54970759"
+       id="stop1620" /></linearGradient><linearGradient
+     inkscape:collect="always"
+     xlink:href="#linearGradient1616"
+     id="linearGradient1618"
+     x1="50.319401"
+     y1="50.319408"
+     x2="264.96313"
+     y2="264.96313"
+     gradientUnits="userSpaceOnUse"
+     gradientTransform="translate(2.7518463,2.7518463)" /><linearGradient
+     inkscape:collect="always"
+     xlink:href="#linearGradient4354"
+     id="linearGradient4356"
+     x1="72.781677"
+     y1="72.6642"
+     x2="241.28168"
+     y2="241.6642"
+     gradientUnits="userSpaceOnUse"
+     gradientTransform="translate(2.7183228,3.3358002)" /><linearGradient
+     inkscape:collect="always"
+     xlink:href="#linearGradient4421"
+     id="linearGradient4423"
+     x1="96"
+     y1="95.75"
+     x2="222"
+     y2="222.75"
+     gradientUnits="userSpaceOnUse"
+     gradientTransform="translate(1.5,0.25)" /><linearGradient
+     inkscape:collect="always"
+     xlink:href="#linearGradient4483"
+     id="linearGradient4485"
+     x1="118"
+     y1="118"
+     x2="202.5"
+     y2="202.5"
+     gradientUnits="userSpaceOnUse" /></defs><sodipodi:namedview
+   id="namedview498"
+   pagecolor="#505050"
+   bordercolor="#ffffff"
+   borderopacity="1"
+   inkscape:showpageshadow="0"
+   inkscape:pageopacity="0"
+   inkscape:pagecheckerboard="1"
+   inkscape:deskcolor="#505050"
+   showgrid="false"
+   inkscape:zoom="2"
+   inkscape:cx="37"
+   inkscape:cy="115.5"
+   inkscape:window-width="1920"
+   inkscape:window-height="1017"
+   inkscape:window-x="-8"
+   inkscape:window-y="-8"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="Layer_1" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<circle
+   style="mix-blend-mode:normal;fill:url(#linearGradient1618);fill-opacity:1"
+   id="path778"
+   cx="160"
+   cy="160"
+   r="150" /><circle
+   style="fill:url(#linearGradient4356);fill-opacity:1"
+   id="path3880"
+   cx="160"
+   cy="160"
+   r="120" /><circle
+   style="fill:url(#linearGradient4423);fill-opacity:1"
+   id="path4358"
+   cx="160"
+   cy="160"
+   r="90" /><circle
+   style="fill:url(#linearGradient4485);fill-opacity:1"
+   id="path4477"
+   r="60"
+   cy="160"
+   cx="160" /><text
+   xml:space="preserve"
+   id="text4539"
+   style="white-space:pre;shape-inside:url(#rect4541);fill:#605f11;fill-opacity:1" /></svg>

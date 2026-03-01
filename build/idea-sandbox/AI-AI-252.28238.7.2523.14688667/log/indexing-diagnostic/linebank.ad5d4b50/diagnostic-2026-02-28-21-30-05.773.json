@@ -1,0 +1,65 @@
+{
+  "appInfo" : {
+    "build" : "252.28238.7.2523.14688667",
+    "buildDate" : "2026-01-09T09:07:00Z[UTC]",
+    "productCode" : "AI",
+    "generated" : "2026-02-28T14:30:05.774089Z",
+    "os" : "macOS 15.6.1",
+    "runtime" : "JetBrains s.r.o. 21.0.8 21.0.8+-14196175-b1038.72"
+  },
+  "runtimeInfo" : {
+    "maxMemory" : 2147483648,
+    "numberOfProcessors" : 10,
+    "maxNumberOfIndexingThreads" : 9,
+    "maxSizeOfFileForIntelliSense" : 2560000,
+    "maxSizeOfFileForContentLoading" : 20971520
+  },
+  "type" : "Scanning",
+  "projectIndexingActivityHistory" : {
+    "projectName" : "LineBank",
+    "times" : {
+      "scanningReason" : "changes in: \"JDK jbr-17 /Users/ewidev6/Library/Java/JavaVirtualMachines/jbr-17.0.14/Contents/Home (java.se, jdk.jdi, jdk.jfr, jdk.net, java.rmi, java.sql, java.xml, jdk.jcmd, jdk.sctp, java.base, jdk.jdeps, jdk.jlink, jdk.zipfs, java.prefs, jdk.attach, jdk.jshell, jdk.jstatd, jdk.random, java.naming, jdk.editpad, jdk.jartool, jdk.javadoc, jdk.xml.dom, java.desktop, java.logging, jdk.charsets, jdk.compiler, jdk.dynalink, jdk.jconsole, jdk.jpackage, jdk.jsobject, java.compiler, java.net.http, jdk.crypto.ec, java.scripting, jdk.httpserver, jdk.jdwp.agent, jdk.localedata, jdk.management, jdk.naming.dns, jdk.naming.rmi, java.instrument, java.management, java.sql.rowset, java.xml.crypto, jdk.internal.ed, jdk.internal.le, jdk.nio.mapmode, jdk.unsupported, java.smartcardio, jdk.internal.opt, java.datatransfer, jdk.accessibility, jdk.hotspot.agent, jdk.security.auth, jdk.security.jgss, java.security.jgss, java.security.sasl, jdk.internal.vm.ci, jdk.management.jfr, java.management.rmi, java.transaction.xa, jdk.crypto.cryptoki, jdk.incubator.vector, jdk.internal.jvmstat, jdk.management.agent, jdk.incubator.foreign, jdk.unsupported.desktop, jdk.internal.vm.compiler, jdk.internal.vm.compiler.management, java.base, java.compiler, java.datatransfer, java.desktop, java.instrument, java.logging, java.management, java.management.rmi, java.naming, java.net.http, java.prefs, java.rmi, java.scripting, java.se, java.security.jgss, java.security.sasl, java.smartcardio, java.sql, java.sql.rowset, java.transaction.xa, java.xml, java.xml.crypto, jdk.accessibility, jdk.attach, jdk.charsets, jdk.compiler, jdk.crypto.cryptoki, jdk.crypto.ec, jdk.dynalink, jdk.editpad, jdk.hotspot.agent, jdk.httpserver, jdk.incubator.foreign, jdk.incubator.vector, jdk.internal.ed, jdk.internal.jvmstat, jdk.internal.le, jdk.internal.opt, jdk.internal.vm.ci, jdk.internal.vm.compiler, jdk.internal.vm.compiler.management, jdk.jartool, jdk.javadoc, jdk.jcmd, jdk.jconsole, jdk.jdeps, jdk.jdi, jdk.jdwp.agent, jdk.jfr, jdk.jlink, jdk.jpackage, jdk.jshell, jdk.jsobject, jdk.jstatd, jdk.localedata, jdk.management, jdk.management.agent, jdk.management.jfr, jdk.naming.dns, jdk.naming.rmi, jdk.net, jdk.nio.mapmode, jdk.random, jdk.sctp, jdk.security.auth, jdk.security.jgss, jdk.unsupported, jdk.unsupported.desktop, jdk.xml.dom, jdk.zipfs)\"",
+      "scanningType" : "PARTIAL",
+      "scanningId" : 2,
+      "creatingIteratorsTime" : 0,
+      "concurrentHandlingWallTimeWithoutPauses" : 0,
+      "concurrentHandlingWallTimeWithPauses" : 0,
+      "concurrentHandlingSumOfThreadTimesWithPauses" : 508412584,
+      "concurrentIterationAndScannersApplicationSumOfThreadTimesWithPauses" : 80438459,
+      "concurrentFileCheckSumOfThreadTimesWithPauses" : 427799291,
+      "delayedPushPropertiesStageTime" : 0,
+      "indexExtensionsTime" : 0,
+      "dumbModeStart" : "2026-02-28T14:30:05.257317Z",
+      "dumbWallTimeWithPauses" : 515894459,
+      "dumbWallTimeWithoutPauses" : 515894459,
+      "updatingStart" : "2026-02-28T14:30:05.257015Z",
+      "updatingEnd" : "2026-02-28T14:30:05.773211459Z",
+      "totalWallTimeWithPauses" : 516196459,
+      "wallTimeOnPause" : 239000,
+      "isCancelled" : false,
+      "totalWallTimeWithoutPauses" : 515957459
+    },
+    "fileCount" : {
+      "numberOfFileProviders" : 1,
+      "numberOfScannedFiles" : 42840,
+      "numberOfFilesIndexedByInfrastructureExtensionsDuringScan" : 0,
+      "numberOfFilesScheduledForIndexingAfterScan" : 0
+    },
+    "scanningStatistics" : [ {
+      "providerName" : "JDK jbr-17 /Users/ewidev6/Library/Java/JavaVirtualMachines/jbr-17.0.14/Contents/Home (java.se, jdk.jdi, jdk.jfr, jdk.net, java.rmi, java.sql, java.xml, jdk.jcmd, jdk.sctp, java.base, jdk.jdeps, jdk.jlink, jdk.zipfs, java.prefs, jdk.attach, jdk.jshell, jdk.jstatd, jdk.random, java.naming, jdk.editpad, jdk.jartool, jdk.javadoc, jdk.xml.dom, java.desktop, java.logging, jdk.charsets, jdk.compiler, jdk.dynalink, jdk.jconsole, jdk.jpackage, jdk.jsobject, java.compiler, java.net.http, jdk.crypto.ec, java.scripting, jdk.httpserver, jdk.jdwp.agent, jdk.localedata, jdk.management, jdk.naming.dns, jdk.naming.rmi, java.instrument, java.management, java.sql.rowset, java.xml.crypto, jdk.internal.ed, jdk.internal.le, jdk.nio.mapmode, jdk.unsupported, java.smartcardio, jdk.internal.opt, java.datatransfer, jdk.accessibility, jdk.hotspot.agent, jdk.security.auth, jdk.security.jgss, java.security.jgss, java.security.sasl, jdk.internal.vm.ci, jdk.management.jfr, java.management.rmi, java.transaction.xa, jdk.crypto.cryptoki, jdk.incubator.vector, jdk.internal.jvmstat, jdk.management.agent, jdk.incubator.foreign, jdk.unsupported.desktop, jdk.internal.vm.compiler, jdk.internal.vm.compiler.management, java.base, java.compiler, java.datatransfer, java.desktop, java.instrument, java.logging, java.management, java.management.rmi, java.naming, java.net.http, java.prefs, java.rmi, java.scripting, java.se, java.security.jgss, java.security.sasl, java.smartcardio, java.sql, java.sql.rowset, java.transaction.xa, java.xml, java.xml.crypto, jdk.accessibility, jdk.attach, jdk.charsets, jdk.compiler, jdk.crypto.cryptoki, jdk.crypto.ec, jdk.dynalink, jdk.editpad, jdk.hotspot.agent, jdk.httpserver, jdk.incubator.foreign, jdk.incubator.vector, jdk.internal.ed, jdk.internal.jvmstat, jdk.internal.le, jdk.internal.opt, jdk.internal.vm.ci, jdk.internal.vm.compiler, jdk.internal.vm.compiler.management, jdk.jartool, jdk.javadoc, jdk.jcmd, jdk.jconsole, jdk.jdeps, jdk.jdi, jdk.jdwp.agent, jdk.jfr, jdk.jlink, jdk.jpackage, jdk.jshell, jdk.jsobject, jdk.jstatd, jdk.localedata, jdk.management, jdk.management.agent, jdk.management.jfr, jdk.naming.dns, jdk.naming.rmi, jdk.net, jdk.nio.mapmode, jdk.random, jdk.sctp, jdk.security.auth, jdk.security.jgss, jdk.unsupported, jdk.unsupported.desktop, jdk.xml.dom, jdk.zipfs)",
+      "numberOfScannedFiles" : 42840,
+      "numberOfSkippedFiles" : 0,
+      "numberOfFilesForIndexing" : 0,
+      "numberOfFilesFullyIndexedByInfrastructureExtensions" : 0,
+      "filesFullyIndexedByInfrastructureExtensions" : [ ],
+      "statusTime" : 397251947,
+      "totalOneThreadTimeWithPauses" : 508412584,
+      "iterationAndScannersApplicationTime" : 80438459,
+      "filesCheckTime" : 427799291,
+      "timeProcessingUpToDateFiles" : 0,
+      "timeUpdatingContentLessIndexes" : 5528025,
+      "timeIndexingWithoutContentViaInfrastructureExtension" : 0,
+      "roots" : [ ]
+    } ]
+  }
+}

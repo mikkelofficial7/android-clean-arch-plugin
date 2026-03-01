@@ -1,0 +1,61 @@
+<application>
+  <component name="ProjectManager">
+    <defaultProject>
+      <component name="AutoImportSettings">
+        <option name="autoReloadType" value="NONE" />
+      </component>
+      <component name="ProjectDictionaryState">
+        <dictionary name="project" />
+      </component>
+      <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;settings.editor.selected.configurable&quot;: &quot;AndroidSdkUpdater&quot;
+  }
+}</component>
+      <component name="SvnConfiguration">
+        <configuration />
+      </component>
+      <component name="TaskManager">
+        <task active="true" id="Default" summary="|b|messages.TaskBundle|k|default.task|Default task">
+          <created>1772289349665</created>
+          <option name="number" value="Default" />
+          <option name="presentableId" value="Default" />
+          <updated>1772289349665</updated>
+        </task>
+        <servers />
+      </component>
+      <component name="WindowStateProjectService">
+        <state x="264" y="73" key="SettingsEditor" timestamp="1772288921527">
+          <screen x="0" y="38" width="1512" height="865" />
+        </state>
+        <state x="264" y="73" key="SettingsEditor/0.38.1512.865" timestamp="1772288921527" />
+      </component>
+      <component name="masterDetails">
+        <states>
+          <state key="Copyright.UI">
+            <settings>
+              <splitter-proportions>
+                <option name="proportions">
+                  <list>
+                    <option value="0.2" />
+                  </list>
+                </option>
+              </splitter-proportions>
+            </settings>
+          </state>
+          <state key="ScopeChooserConfigurable.UI">
+            <settings>
+              <splitter-proportions>
+                <option name="proportions">
+                  <list>
+                    <option value="0.2" />
+                  </list>
+                </option>
+              </splitter-proportions>
+            </settings>
+          </state>
+        </states>
+      </component>
+    </defaultProject>
+  </component>
+</application>

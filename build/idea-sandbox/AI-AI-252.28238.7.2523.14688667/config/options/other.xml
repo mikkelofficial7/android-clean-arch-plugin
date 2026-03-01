@@ -1,0 +1,55 @@
+<application>
+  <component name="ActionHistoryManager">
+    <ids>
+      <option value="WelcomeScreen.Plugins" />
+    </ids>
+  </component>
+  <component name="FileEditorProviderManager">{}</component>
+  <component name="NotRoamableUiSettings">
+    <option name="fontSize" value="13.0" />
+    <option name="presentationModeIdeScale" value="1.75" />
+  </component>
+  <component name="PropertyService"><![CDATA[{
+  "keyToString": {
+    "FileTemplates.SelectedTemplate": "HTML File",
+    "MarketplacePluginsSearchHistory": "clean arch\nclean ar\nclean a\nclean",
+    "MemberChooser.copyJavadoc": "false",
+    "MemberChooser.showClasses": "true",
+    "PluginConfigurable.selectionTab": "1",
+    "RunOnceActivity.TerminalFontSettingsService.fixStoredNonMonospacedFonts": "true",
+    "RunOnceActivity.TerminalOptionsProvider.migration.2025.1.1": "true",
+    "RunOnceActivity.VFSInitializationConditionsToFusReporter": "true",
+    "RunOnceActivity.cidr.test.framework.showIndexingAsTask": "true",
+    "RunOnceActivity.cidr.test.roots.only": "true",
+    "RunOnceActivity.git.modal.commit.toggle": "true",
+    "RunOnceActivity.reset.auto.reparse.settings.to.default": "true",
+    "RunOnceActivity.set.chat.model.provider.canary4": "true",
+    "Source Code Editor With PreviewLayout": "Editor only",
+    "build.toolwindow.Sync.selection.state": "com.intellij.build.BuildTreeConsoleView",
+    "com.google.aiplugin.rag.indexer.implementation": "com.google.aiplugin.rag.bm25.CrawlerBm25Indexer/v3",
+    "enter_selection_count": "2",
+    "experimental.ui.used.version": "252.28238.7.2523.14688667",
+    "fileTypeChangedCounter": "1",
+    "fontSizeToResetConsole": "13.0",
+    "fontSizeToResetEditor": "13.0",
+    "got.it.tooltip.Plugins Auto-Update": "1",
+    "installed.kotlin.plugin.version": "252.28238.7.2523.14688667-AS",
+    "kotlin.k2.incompatible.plugin.notification.shown.for.com.android.kotlin.architecture": "true",
+    "kotlin.lastUpdateCheck": "1772298982769",
+    "migrate.android.sdk.path.to.roamable.storage": "false",
+    "migrated.non.roamable.values.from.general.settings": "true",
+    "previousColorScheme": "_@user_Dark",
+    "registry.to.advanced.settings.migration.build": "AI-252.28238.7.2523.14688667",
+    "studio.activity.count": "0",
+    "terminal.gen.one.option.visible": "false"
+  },
+  "keyToStringList": {
+    "fileTypeDetectors": [
+      "com.intellij.ide.scratch.ScratchFileServiceImpl$Detector",
+      "com.jetbrains.cidr.lang.OCHeaderFileTypeDetector",
+      "com.android.tools.idea.profilers.capture.MemoryCaptureFileType$Detector",
+      "org.jetbrains.plugins.textmate.TextMateFileType$TextMateFileDetector"
+    ]
+  }
+}]]></component>
+</application>

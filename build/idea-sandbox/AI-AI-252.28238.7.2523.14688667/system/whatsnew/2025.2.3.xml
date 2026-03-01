@@ -1,0 +1,236 @@
+<?xml version="1.0"?>
+<!--
+  ~ Copyright (C) 2019 The Android Open Source Project
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~      http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+<tutorialBundle
+    name="What's New"
+    resourceRoot="/"
+    stepByStep="false"
+    hideStepIndex="true"
+    version="2025.2.3.00">
+  <feature
+      name="What's New in Otter 3 Feature Drop">
+    <tutorial
+        key="whats-new"
+        label=" What's New in Otter 3 Feature Drop"
+        icon="stable/product-icon.svg"
+        remoteLink="https://d.android.com/r/studio-ui/whats-new-assistant/preview-release-notes/2025-2-3"
+        remoteLinkLabel="Read in a browser">
+      <description>
+        <![CDATA[
+          This panel describes some of the new features and behavior changes
+          included in this update.
+          <br><br>
+          To open this panel again later, select <b>Help &gt; What's New in Android Studio</b>
+          from the main menu.
+        ]]>
+      </description>
+      <step label="Studio Labs features available">
+        <stepElement>
+          <section>
+            <![CDATA[
+            <p>Studio Labs lets you try out the latest AI experimental features in a stable version
+            of Android Studio, so you can more quickly integrate our AI assistance offerings in your
+            development workflow. To enable the features, go to <b>Studio Labs</b> in settings.</p>
+            <br>
+            <a href="https://d.android.com/r/studio-ui/gemini/labs">Learn more</a>
+            <br>
+            ]]>
+          </section>
+        </stepElement>
+      </step>
+      <step label="App Links Assistant AI Agent">
+        <stepElement>
+          <section>
+            <![CDATA[
+            <p>Implementing <a href="https://developer.android.com/training/app-links/about">Android
+            App Links</a> is essential for a seamless user experience, but writing the logic to handle
+            intents can often by manual and tedious. The App Links Assistant—a plugin designed to help
+            you validate and implement Android App Links—is now integrated with AI to automate the
+            creation of App Links logic, significantly simplifying one of the most time-consuming steps
+            of implementation.</p>
+            <br>
+            <a href="https://d.android.com/r/studio-ui/gemini/app-links-ai-assistant">Learn more</a>
+            <br>
+            ]]>
+          </section>
+        </stepElement>
+      </step>
+      <step label="Journeys for Android Studio in Studio Labs">
+        <stepElement>
+          <section>
+            <![CDATA[
+            <p>In Android Studio Otter 3 Feature Drop, Journeys for Android Studio is moving to Studio Labs
+            as an experimental feature, making it accessible in RC and stable versions of Android Studio
+            through the Studio Labs menu.</p>
+            <br>
+            <a href="https://d.android.com/r/studio-ui/test/journeys">Learn more</a>
+            <br>
+            ]]>
+          </section>
+        </stepElement>
+      </step>
+      <step label="UI development in Agent Mode">
+        <stepElement>
+          <section>
+            <![CDATA[
+            <p>Gemini is now more deeply integrated into the UI development workflow directly within the
+            <a href="https://d.android.com/develop/ui/compose/tooling/previews">Compose Preview</a>,
+            helping you go from design to a high-quality implementation faster. New capabilities
+            include generating Compose code from a design mock, refining UI to match a reference
+            design, iterating on your UI using natural language prompts, and automatically finding
+            and fixing common UI quality issues. Additionally, Gemini can help accelerate your
+            setup by generating more accurate Compose Previews and fixing Preview rendering
+            errors.</p>
+            <br>
+            <a href="https://d.android.com/r/studio-ui/gemini/ui-development">Learn more</a>
+            <br>
+            ]]>
+          </section>
+        </stepElement>
+      </step>
+      <step label="Manage multiple conversation threads with Gemini">
+        <stepElement>
+          <section>
+            <![CDATA[
+            <p>You can now organize your conversation with Gemini in Android Studio into multiple
+            threads. This lets you switch between multiple ongoing tasks and search through your
+            conversation history. Using separate threads for each task also improves response quality
+            by limiting the scope of the AI's context to only the topic at hand.</p>
+            <br>
+            <a href="https://d.android.com/r/studio-ui/gemini/multiple-threads">Learn more</a>
+            <br>
+            ]]>
+          </section>
+        </stepElement>
+      </step>
+      <step label="Use a local model">
+        <stepElement>
+          <section>
+            <![CDATA[
+            <p>Android Studio Otter 3 Feature Drop lets you choose the LLM
+            that powers the AI features of Android Studio. The LLM must be on your local machine.</p>
+            <br>
+            <p>A local LLM offers an alternative to the LLM support built into
+            Android Studio. However, Gemini in Android Studio typically
+            provides the best Android development experience because Gemini is
+            tuned for Android and supports all features of Android Studio. With
+            Gemini, you can choose from a variety of models for your Android
+            development tasks, including the no-cost default model or models
+            accessed with a paid Gemini API key.</p>
+            <br>
+            <p>Support for local LLMs requires installation of an LLM provider
+            such as LM Studio or Ollama on your local computer.</p>
+            <br>
+            <a href="https://d.android.com/r/studio-ui/gemini/use-a-local-llm">Learn more</a>
+            <br>
+            ]]>
+          </section>
+        </stepElement>
+      </step>
+      <step label="Use a remote model">
+        <stepElement>
+          <section>
+            <![CDATA[
+            <p>Android Studio enables you to use remote models to power its AI features. To use a
+            remote model, configure a remote model provider in Android Studio's settings by
+            providing a name for the provider, the API endpoint URL, and your API key. After you've
+            configured a provider, you can select the remote model from the model picker in the AI
+            chat window.</p>
+            <br>
+            <a href="https://d.android.com/r/studio-ui/gemini/use-a-remote-llm">Learn more</a>
+            <br>
+            ]]>
+          </section>
+        </stepElement>
+      </step>
+      <step label="Find and review changes using the changes drawer">
+        <stepElement>
+          <section>
+            <![CDATA[
+            <p>You can now see and manage changes made by the AI agent using the changes drawer.
+            When the agent makes changes to your codebase, see the files that were edited at
+            <b>Files to review</b>. From there, you can keep or revert the changes individually or
+            all together. Click an individual file in the drawer to see the code diff in the editor
+            and make refinements if needed.</p>
+            <br>
+            <a href="https://d.android.com/r/studio-ui/ai/changes-drawer">Learn more</a>
+            <br>
+            ]]>
+          </section>
+        </stepElement>
+      </step>
+      <step label="Automatic Logcat retracing">
+        <stepElement>
+          <section>
+            <![CDATA[
+            <p>With AGP 9.0, Logcat now automatically retraces stack traces when R8 is enabled.
+            This means that even when using R8, you can see understandable stack traces directly in
+            Logcat.</p>
+            <br>
+            <p>Previously, when using R8, you had to use R8's <code>retrace</code>
+            command-line tool to get understandable stack traces. With R8, retracing stack traces is
+            required because R8's optimizations can change the line numbers and the names of classes
+            and methods.</p>
+            <br>
+            <a href="https://d.android.com/r/studio-ui/test/logcat-retrace">Learn more</a>
+            <br>
+            ]]>
+          </section>
+        </stepElement>
+      </step>
+      <step label="Support for remote MCP servers">
+        <stepElement>
+          <section>
+            <![CDATA[
+            <p>Starting with Android Studio Otter 1 Canary 3, you can connect to a remote MCP server
+            to expand the capabilities of Gemini in Android Studio's Agent Mode with minimal setup
+            work required.</p>
+            <br>
+            <a href="https://d.android.com/r/studio-ui/gemini/remote-mcp">Learn more</a>
+            <br>
+            ]]>
+          </section>
+        </stepElement>
+      </step>
+      <step label="Device interaction tools">
+        <stepElement>
+          <section>
+            <![CDATA[
+            <p>AI agents in Android Studio now have access to tools to deploy an application to the
+            connected device, inspect what is currently shown on the screen, take screenshots, check
+            Logcat for errors, and interact with the running application through <code>adb shell
+            input</code>. This lets the agent help you with changes or fixes that involve re-running
+            the application, checking for errors, and verifying that a particular update was made
+            successfully (for example, by taking and reviewing screenshots.</p>
+            <br>
+            <a href="https://d.android.com/r/studio-ui/gemini/device-interaction">Learn more</a>
+            <br>
+            ]]>
+          </section>
+        </stepElement>
+      </step>
+      <footerStep label="">
+        <stepElement>
+          <section>
+            <![CDATA[
+              <br><em>Last updated 01/15/2026</em><br>
+            ]]>
+          </section>
+        </stepElement>
+      </footerStep>
+    </tutorial>
+  </feature>
+</tutorialBundle>

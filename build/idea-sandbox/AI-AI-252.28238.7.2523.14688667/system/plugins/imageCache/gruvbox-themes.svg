@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+  <rect width="40" height="40" rx="8" fill="#3c3836"/>
+  
+  <!-- Top Face -->
+  <path d="M20 20 L8 13 L20 6 L32 13 Z" fill="#fabd2f"/>
+  
+  <!-- Left Face -->
+  <path d="M20 20 L8 13 L8 27 L20 34 Z" fill="#fb4934"/>
+  
+  <!-- Right Face -->
+  <path d="M20 20 L32 13 L32 27 L20 34 Z" fill="#b8bb26"/>
+  
+  <!-- Code Lines / Texture -->
+  <g stroke="#ebdbb2" stroke-width="2" stroke-linecap="round" stroke-opacity="0.6">
+    <!-- Left Face Code -->
+    <line x1="11" y1="18" x2="17" y2="21.5" />
+    <line x1="11" y1="21" x2="15" y2="23.3" />
+    <line x1="11" y1="24" x2="16" y2="26.9" />
+    
+    <!-- Right Face Code -->
+    <line x1="23" y1="21.5" x2="29" y2="18" />
+    <line x1="25" y1="23.3" x2="29" y2="21" />
+    <line x1="24" y1="26.9" x2="29" y2="24" />
+  </g>
+</svg>

@@ -4,17 +4,22 @@
   <change-notes><![CDATA[Initial version]]></change-notes>
   <version>1.0</version>
   <id>com.android.kotlin.architecture</id>
-  <name>Kotlin Android S&gt;O.L.I.D Architecture</name>
+  <name>Kotlin Android S.O.L.I.D Arch</name>
   <vendor url="https://mikkelofficial7.github.io">Mikkel Septiano</vendor>
-  <description><![CDATA[Example of Android Kotlin<br>
-        <em>Clean Architecture</em>
+  <description><![CDATA[Example of Android Kotlin <em>Clean Architecture</em>
         <br><br>
-        We generate ViewModel, UseCase, and Repository automatically]]></description>
+        We generate minimum setup of ViewModel, UseCase, and Repository automatically
+        with additional support for Retrofit and Coroutine setup.
+        <br><br>
+        To use this tool feature, select View | Tool Windows | Generate S.O.L.I.D Architecture.
+        <br><br>
+        <p>📸 Screenshots and usage guide:</p>
+        <p>https://github.com/mikkelofficial7/android-clean-arch-plugin</p>]]></description>
   <depends>com.intellij.modules.platform</depends>
   <depends>com.intellij.modules.java</depends>
   <extensions defaultExtensionNs="com.intellij" />
   <actions>
-    <action id="com.android.kotlin.architecture.Main" class="com.android.kotlin.architecture.Main" text="Generate S.O.L.I.D Form">
+    <action id="com.android.kotlin.architecture.Main" class="com.android.kotlin.architecture.Main" text="Generate S.O.L.I.D Architecture">
       <add-to-group group-id="ToolsMenu" anchor="last" />
     </action>
   </actions>

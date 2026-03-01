@@ -11,7 +11,10 @@
         We generate minimum setup of ViewModel, UseCase, and Repository automatically
         with additional support for Retrofit and Coroutine setup.
         <br><br>
-        To use this tool feature, select View | Tool Windows | Generate S.O.L.I.D Architecture.]]></description>
+        To use this tool feature, select View | Tool Windows | Generate S.O.L.I.D Architecture.
+        <br><br>
+        <p>📸 Screenshots and usage guide:</p>
+        <p>https://github.com/mikkelofficial7/android-clean-arch-plugin</p>]]></description>
   <depends>com.intellij.modules.platform</depends>
   <depends>com.intellij.modules.java</depends>
   <extensions defaultExtensionNs="com.intellij" />

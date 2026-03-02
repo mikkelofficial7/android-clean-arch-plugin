@@ -1,5 +1,9 @@
 ## Kotlin Android Clean Architecture Plugin
 
+See demo video below:
+
+[Demo Video](https://videy.co/v/?id=Jkf9Uo482)
+
 Let's try this plugin to help you architecting and learning about simply and minimal S.O.L.I.D principle pattern.
 <br>
 Just search "Kotlin Android S.O.L.I.D Arch"

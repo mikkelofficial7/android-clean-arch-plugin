@@ -10,6 +10,11 @@ Let's try this plugin to help you architecting and learning about simply and min
 <br>
 Just search "Kotlin Android S.O.L.I.D Arch"
 
+```adlanguage
+Support for 2025.2.3.9 above 
+(Released Android Studio Otter 3 Feature Drop | 2025.2.3)
+```
+
 <p align="center">
   <img src="https://raw.githubusercontent.com/mikkelofficial7/android-clean-arch-plugin/main/screenshot1.png" width="45%"/>
   <img src="https://raw.githubusercontent.com/mikkelofficial7/android-clean-arch-plugin/main/screenshot2.png" width="45%" height="295"/>

@@ -1,5 +1,7 @@
 ## Kotlin Android Clean Architecture Plugin
 
+[![JetBrains Plugin](https://img.shields.io/badge/JetBrains-Plugin-000000?style=for-the-badge&logo=jetbrains&logoColor=white)](https://plugins.jetbrains.com/plugin/30455-kotlin-android-s-o-l-i-d-arch)
+
 See demo video below:
 
 [Demo Video](https://videy.co/v/?id=Jkf9Uo482)

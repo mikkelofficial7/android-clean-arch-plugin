@@ -18,7 +18,7 @@ repositories {
 // Read more: https://plugins.jetbrains.com/docs/intellij/tools-intellij-platform-gradle-plugin.html
 dependencies {
     intellijPlatform {
-        // create("AI", "2025.2.3.8") // for install new Android Studio if you don't have
+        // create("AI", "2025.2.3.9") // for install new Android Studio if you don't have
         local("/Applications/Android Studio (Otter).app") // using existing installed Android Studio
         bundledPlugin("com.intellij.java")
         bundledPlugin("org.jetbrains.kotlin")

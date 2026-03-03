@@ -2,16 +2,17 @@ package com.android.kotlin.architecture
 
 import com.intellij.openapi.actionSystem.AnAction
 import com.intellij.openapi.actionSystem.AnActionEvent
+import com.intellij.openapi.command.WriteCommandAction
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.ui.DialogWrapper
 import com.intellij.openapi.ui.ValidationInfo
+import com.intellij.psi.PsiDocumentManager.getInstance
+import com.intellij.psi.PsiManager
 import com.intellij.ui.components.JBScrollPane
 import com.intellij.util.ui.JBUI
 import java.awt.BorderLayout
 import java.awt.Dimension
 import java.awt.Font
-import java.awt.Toolkit
-import java.awt.datatransfer.StringSelection
 import javax.swing.*
 
 class Main : AnAction() {
@@ -37,9 +38,77 @@ class Main : AnAction() {
                 val repositoryFormat = if (repository.any { it.isWhitespace() }) repository.toPascalCase() else repository.capitalizeFirstChar()
 
                 FileGenerator(project, activityFormat, viewModelFormat, useCaseFormat, repositoryFormat).execute()
-                SuccessAlertDialog().show()
+                addDependencyToGradle(project)
             }
         }
+    }
+
+    fun addDependencyToGradle(project: Project) {
+        val baseDir = project.baseDir
+        val appDir = baseDir.findChild("app") ?: return
+
+        val gradleFile =
+            appDir.findChild("build.gradle.kts") ?: appDir.findChild("build.gradle") ?: return
+        val isKts = gradleFile.extension == "kts"
+
+        val textToWrite = dependencyBlockString(isKts)
+
+        val psiFile = PsiManager.getInstance(project)
+            .findFile(gradleFile) ?: return
+
+        WriteCommandAction.runWriteCommandAction(project) {
+            val document = getInstance(project)
+                .getDocument(psiFile) ?: return@runWriteCommandAction
+
+            val text = document.text
+
+            getListOfAdditionalGradle().map { gradleFile ->
+                if (text.contains(gradleFile)) {
+                   return@map
+                }
+            }
+
+            val dependenciesIndex = text.indexOf("dependencies {")
+
+            if (dependenciesIndex != -1) {
+                val insertIndex = text.indexOf("{", dependenciesIndex) + 1
+                document.insertString(insertIndex, "\n    $textToWrite\n")
+            }
+
+            getInstance(project).commitDocument(document)
+        }
+
+        SuccessAlertDialog(textToWrite).show()
+    }
+
+    fun dependencyBlockString(isKts: Boolean): String {
+        return if (isKts) {
+            """
+                implementation("${getListOfAdditionalGradle()[0]}:2.8.7")
+                implementation("${getListOfAdditionalGradle()[1]}:2.8.7")
+                implementation("${getListOfAdditionalGradle()[2]}:1.8.1")
+                implementation("${getListOfAdditionalGradle()[3]}:2.11.0")
+                implementation("${getListOfAdditionalGradle()[4]}:2.11.0")
+            """.trimIndent()
+        } else {
+            """
+                implementation "${getListOfAdditionalGradle()[0]}:2.8.7"
+                implementation "${getListOfAdditionalGradle()[1]}:2.8.7"
+                implementation "${getListOfAdditionalGradle()[2]}:1.8.1"
+                implementation "${getListOfAdditionalGradle()[3]}.0"
+                implementation "${getListOfAdditionalGradle()[4]}:2.11.0"
+            """.trimIndent()
+        }
+    }
+
+    fun getListOfAdditionalGradle(): List<String> {
+       return listOf(
+           "androidx.lifecycle:lifecycle-viewmodel-ktx",
+           "androidx.lifecycle:lifecycle-livedata-ktx",
+           "org.jetbrains.kotlinx:kotlinx-coroutines-android",
+           "com.squareup.retrofit2:retrofit",
+           "com.squareup.retrofit2:converter-gson"
+       )
     }
 }
 
@@ -151,27 +220,14 @@ class GenerateSolidArchDialog(project: Project?) : DialogWrapper(project) {
     fun getRepositoryName() = repositoryField.text
 }
 
-class SuccessAlertDialog() : DialogWrapper(true) {
+class SuccessAlertDialog(val gradle: String) : DialogWrapper(true) {
     init {
         title = "Info"
         init()
     }
 
     override fun createCenterPanel(): JComponent {
-        val title = "File generated successfully!\n\nCopy these to your build.gradle file:"
-        val codeText = "implementation \"androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.7\"\n" +
-                "implementation \"androidx.lifecycle:lifecycle-livedata-ktx:2.8.7\"\n" +
-                "implementation \"org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.1\"\n" +
-                "implementation \"com.squareup.retrofit2:retrofit:2.11.0\"\n" +
-                "implementation \"com.squareup.retrofit2:converter-gson:2.11.0\""
-
-        val textToCopy = "" +
-                "implementation \"androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.7\"\n" +
-                "implementation \"androidx.lifecycle:lifecycle-livedata-ktx:2.8.7\"\n" +
-                "implementation \"org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.1\"\n" +
-                "implementation \"com.squareup.retrofit2:retrofit:2.11.0\"\n" +
-                "implementation \"com.squareup.retrofit2:converter-gson:2.11.0\""
-
+        val title = "File generated successfully!\n\nWill auto write these to your build.gradle file:"
         val panel = JPanel(BorderLayout())
 
         val textArea = JTextArea(title).apply {
@@ -186,7 +242,7 @@ class SuccessAlertDialog() : DialogWrapper(true) {
             border = BorderFactory.createEmptyBorder()
         }
 
-        val codeArea = JTextArea(codeText).apply {
+        val codeArea = JTextArea(gradle).apply {
             isEditable = false
             font = Font(Font.MONOSPACED, Font.PLAIN, 13)
             margin = JBUI.insets(8)
@@ -197,18 +253,8 @@ class SuccessAlertDialog() : DialogWrapper(true) {
             preferredSize = Dimension(520, 130)
         }
 
-        val copyButton = JButton("Copy all")
-        copyButton.addActionListener {
-            val selection = StringSelection(textToCopy)
-            Toolkit.getDefaultToolkit().systemClipboard.setContents(selection, null)
-        }
-
-        val bottomPanel = JPanel()
-        bottomPanel.add(copyButton)
-
         panel.add(headerPane, BorderLayout.NORTH)
         panel.add(codePane, BorderLayout.CENTER)
-        panel.add(bottomPanel, BorderLayout.SOUTH)
 
         return panel
     }

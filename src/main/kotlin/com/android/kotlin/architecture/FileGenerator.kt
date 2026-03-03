@@ -138,7 +138,6 @@ class FileGenerator(
 
             val content = """
                 package $packageName.network
-                import $packageName.network.$apiServiceName
                 import retrofit2.Retrofit
                 import retrofit2.converter.gson.GsonConverterFactory
                 

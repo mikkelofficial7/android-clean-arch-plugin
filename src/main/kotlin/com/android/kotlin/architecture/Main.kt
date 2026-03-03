@@ -27,10 +27,10 @@ class Main : AnAction() {
             val repository = dialog.getRepositoryName()
 
             if (project != null && !useCase.isNullOrEmpty() && !repository.isNullOrEmpty() && !viewModel.isNullOrEmpty() && !activity.isNullOrEmpty()) {
-                val activityFormat = if (activity.any { it.isWhitespace() }) activity.toPascalCase() else activity
-                val viewModelFormat = if (viewModel.any { it.isWhitespace() }) viewModel.toPascalCase() else viewModel
-                val useCaseFormat = if (useCase.any { it.isWhitespace() }) useCase.toPascalCase() else useCase
-                val repositoryFormat = if (repository.any { it.isWhitespace() }) repository.toPascalCase() else repository
+                val activityFormat = if (activity.any { it.isWhitespace() }) activity.toPascalCase() else activity.capitalizeFirstChar()
+                val viewModelFormat = if (viewModel.any { it.isWhitespace() }) viewModel.toPascalCase() else viewModel.capitalizeFirstChar()
+                val useCaseFormat = if (useCase.any { it.isWhitespace() }) useCase.toPascalCase() else useCase.capitalizeFirstChar()
+                val repositoryFormat = if (repository.any { it.isWhitespace() }) repository.toPascalCase() else repository.capitalizeFirstChar()
 
                 FileGenerator(project, activityFormat, viewModelFormat, useCaseFormat, repositoryFormat).execute()
                 SuccessAlertDialog().show()

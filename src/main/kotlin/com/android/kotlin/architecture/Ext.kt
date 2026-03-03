@@ -9,3 +9,9 @@ fun String.toPascalCase(): String {
             word.lowercase().replaceFirstChar { it.uppercase() }
         }
 }
+
+fun String.capitalizeFirstChar(): String {
+    return this.split("\\s+").joinToString { word ->
+        word.replaceFirstChar { it.uppercase() }
+    }
+}

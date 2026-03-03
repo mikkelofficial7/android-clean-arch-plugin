@@ -4,7 +4,6 @@ import com.intellij.openapi.actionSystem.AnAction
 import com.intellij.openapi.actionSystem.AnActionEvent
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.ui.DialogWrapper
-import com.intellij.openapi.ui.Messages
 import com.intellij.openapi.ui.ValidationInfo
 import com.intellij.ui.components.JBScrollPane
 import com.intellij.util.ui.JBUI
@@ -26,7 +25,12 @@ class Main : AnAction() {
             val useCase = dialog.getUseCaseName()
             val repository = dialog.getRepositoryName()
 
-            if (project != null && !useCase.isNullOrEmpty() && !repository.isNullOrEmpty() && !viewModel.isNullOrEmpty() && !activity.isNullOrEmpty()) {
+            if (project != null
+                && !useCase.isNullOrEmpty()
+                && !repository.isNullOrEmpty()
+                && !viewModel.isNullOrEmpty()
+                && !activity.isNullOrEmpty()) {
+
                 val activityFormat = if (activity.any { it.isWhitespace() }) activity.toPascalCase() else activity.capitalizeFirstChar()
                 val viewModelFormat = if (viewModel.any { it.isWhitespace() }) viewModel.toPascalCase() else viewModel.capitalizeFirstChar()
                 val useCaseFormat = if (useCase.any { it.isWhitespace() }) useCase.toPascalCase() else useCase.capitalizeFirstChar()
@@ -79,6 +83,15 @@ class GenerateSolidArchDialog(project: Project?) : DialogWrapper(project) {
             )
         }
 
+        val values = listOf(activityField.text.trim().lowercase(), viewModelField.text.trim().lowercase(), useCaseField.text.trim().lowercase(), repositoryField.text.trim().lowercase())
+        val allSame = values.all { it == values.first() }
+
+        if (allSame) {
+            return ValidationInfo(
+                "Cannot contains similar identical name among 4 fields",
+                repositoryField
+            )
+        }
         return null
     }
 

@@ -36,7 +36,8 @@ intellijPlatform {
         }
 
         changeNotes = """
-            Initial version
+            update gradle libraries auto written to build.gradle
+            enhance indentation position in Activity.kt
         """.trimIndent()
     }
 }

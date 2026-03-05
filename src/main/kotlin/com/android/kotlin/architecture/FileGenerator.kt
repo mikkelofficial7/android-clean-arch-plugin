@@ -3,6 +3,7 @@ package com.android.kotlin.architecture
 import com.intellij.openapi.command.WriteCommandAction
 import com.intellij.openapi.project.Project
 import com.intellij.psi.*
+import com.intellij.psi.PsiDocumentManager.getInstance
 import com.intellij.psi.search.GlobalSearchScope
 import com.intellij.psi.search.PsiShortNamesCache
 
@@ -395,43 +396,55 @@ class FileGenerator(
         viewModelClassFullName: String
     ) {
         WriteCommandAction.runWriteCommandAction(project) {
+
             val repositoryClassName = repositoryClassFullName.substringAfterLast(".")
             val useCaseClassName = useCaseClassFullName.substringAfterLast(".")
             val viewModelClassName = viewModelClassFullName.substringAfterLast(".")
 
-            val imports = """
-            import androidx.appcompat.app.AppCompatActivity
-            import android.os.Bundle
-            import $packageName.R
+            val psiManager = getInstance(project)
+            val document = psiManager.getDocument(psiFile) ?: return@runWriteCommandAction
+
+            var text = document.text
+
+            val classSignature = "class $activityName : AppCompatActivity()"
+            val classIndex = text.indexOf(classSignature)
+
+            if (classIndex == -1) return@runWriteCommandAction
+
+            val textImport = """
             import $retrofitInstanceFullName
             import $repositoryClassFullName
             import $useCaseClassFullName
             import $viewModelClassFullName
-        """.trimIndent()
+            """.trimIndent() + "\n\n"
 
-            val classCode = """
-            class $activityName : AppCompatActivity() {
-                // if you re-generate plugin, this will be replaced by new ViewModel, UseCase and Repository
-                // Ensure you are aware with this..
+            // Insert imports before class
+            document.insertString(classIndex, textImport)
+            psiManager.commitDocument(document)
+
+            // Re-read updated text
+            text = document.text
+
+            val updatedClassIndex = text.indexOf(classSignature)
+            val braceIndex = text.indexOf("{", updatedClassIndex)
+            if (braceIndex == -1) return@runWriteCommandAction
+
+            val viewModelCode = """
                 
-                private val viewModel by lazy {
-                    val repository = $repositoryClassName($retrofitInstance.api)
-                    val useCase = $useCaseClassName(repository)
-                    $viewModelClassName(useCase)
-                }
+                   private val ${viewModelClassName.lowercase()} by lazy {
+                       val repository = $repositoryClassName($retrofitInstance.api)
+                       val useCase = $useCaseClassName(repository)
+                       $viewModelClassName(useCase)
+                   }
             
-                override fun onCreate(savedInstanceState: Bundle?) {
-                    super.onCreate(savedInstanceState)
-                    setContentView(R.layout.activity_main)
-                    // Your code here
-                }
+            """.trimIndent()
+
+            // Prevent duplicate injection
+            if (!text.contains("private val ${viewModelClassName.lowercase()} by lazy")) {
+                document.insertString(braceIndex + 1, viewModelCode)
             }
-        """.trimIndent()
 
-            val newFileText = "$imports\n\n$classCode"
-
-            // Replace file content
-            psiFile.virtualFile.setBinaryContent(newFileText.toByteArray())
+            psiManager.commitDocument(document)
         }
     }
 }

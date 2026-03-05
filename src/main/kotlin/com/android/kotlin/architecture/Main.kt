@@ -163,6 +163,34 @@ class GenerateSolidArchDialog(project: Project?) : DialogWrapper(project) {
             )
         }
 
+        if (activityField.text.any { it.isDigit() }) {
+            return ValidationInfo(
+                "Activity name cannot contains numbers",
+                activityField
+            )
+        }
+
+        if (viewModelField.text.any { it.isDigit() }) {
+            return ValidationInfo(
+                "ViewModel name cannot contains numbers",
+                viewModelField
+            )
+        }
+
+        if (useCaseField.text.any { it.isDigit() }) {
+            return ValidationInfo(
+                "UseCase name cannot contains numbers",
+                useCaseField
+            )
+        }
+
+        if (repositoryField.text.any { it.isDigit() }) {
+            return ValidationInfo(
+                "Repository name cannot contains numbers",
+                repositoryField
+            )
+        }
+
         val values = listOf(activityField.text.trim().lowercase(), viewModelField.text.trim().lowercase(), useCaseField.text.trim().lowercase(), repositoryField.text.trim().lowercase())
         val allSame = values.all { it == values.first() }
 
@@ -270,7 +298,10 @@ class SuccessAlertDialog(val gradle: String) : DialogWrapper(true) {
         }
 
         panel.add(headerPane, BorderLayout.NORTH)
-        panel.add(codePane, BorderLayout.CENTER)
+
+        if (gradle.isNotEmpty()) {
+            panel.add(codePane, BorderLayout.CENTER)
+        }
 
         return panel
     }

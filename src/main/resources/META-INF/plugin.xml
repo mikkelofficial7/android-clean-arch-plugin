@@ -5,15 +5,18 @@
     <vendor url="https://mikkelofficial7.github.io">Mikkel Septiano</vendor>
 
     <description><![CDATA[
-        Example of Android Kotlin <em>Clean Architecture</em>
+        Android Kotlin <em>Clean Architecture</em> generator.
         <br><br>
-        We generate minimum setup of ViewModel, UseCase, and Repository automatically
+        We generate minimum setup helper of ViewModel, UseCase, and Repository automatically
         with additional support for Retrofit and Coroutine setup.
         <br><br>
-        To use this tool feature, select View | Tool Windows | Generate S.O.L.I.D Architecture.
+        To use this tool feature, select View > Tool Windows > Generate S.O.L.I.D Architecture.
         <br><br>
         <p>📸 Screenshots and usage guide:</p>
         <p>https://github.com/mikkelofficial7/android-clean-arch-plugin</p>
+        <br>
+        <p>▶️ Watch this video to learn more:</p>
+        <p>https://videy.co/v?id=Jkf9Uo482</p>
     ]]></description>
 
     <depends>com.intellij.modules.platform</depends>

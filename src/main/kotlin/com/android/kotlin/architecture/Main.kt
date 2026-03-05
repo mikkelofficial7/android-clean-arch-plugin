@@ -49,12 +49,13 @@ class Main : AnAction() {
 
         val gradleFile =
             appDir.findChild("build.gradle.kts") ?: appDir.findChild("build.gradle") ?: return
-        val isKts = gradleFile.extension == "kts"
-
-        val textToWrite = dependencyBlockString(isKts)
+        val isKtsFile = gradleFile.extension == "kts"
 
         val psiFile = PsiManager.getInstance(project)
             .findFile(gradleFile) ?: return
+
+        var textToGenerate = ""
+        var textToWrite = ""
 
         WriteCommandAction.runWriteCommandAction(project) {
             val document = getInstance(project)
@@ -62,9 +63,18 @@ class Main : AnAction() {
 
             val text = document.text
 
-            getListOfAdditionalGradle().map { gradleFile ->
+            getListOfAdditionalGradle().mapIndexed { i, gradleFile ->
                 if (text.contains(gradleFile)) {
-                   return@map
+                   return@mapIndexed
+                } else {
+                    if (i > 0) {
+                        textToGenerate += "    "
+                    }
+                    textToGenerate += formattingRawStringInfoGradle(isKtsFile, gradleFile, gradleVer = getListOfAdditionalGradleVersion()[i])
+                    textToGenerate += "\n"
+
+                    textToWrite += formattingRawStringInfoGradle(isKtsFile, gradleFile, gradleVer = getListOfAdditionalGradleVersion()[i])
+                    textToWrite += "\n"
                 }
             }
 
@@ -72,7 +82,7 @@ class Main : AnAction() {
 
             if (dependenciesIndex != -1) {
                 val insertIndex = text.indexOf("{", dependenciesIndex) + 1
-                document.insertString(insertIndex, "\n    $textToWrite\n")
+                document.insertString(insertIndex, "\n    $textToGenerate")
             }
 
             getInstance(project).commitDocument(document)
@@ -81,23 +91,15 @@ class Main : AnAction() {
         SuccessAlertDialog(textToWrite).show()
     }
 
-    fun dependencyBlockString(isKts: Boolean): String {
-        return if (isKts) {
-            """
-                implementation("${getListOfAdditionalGradle()[0]}:2.8.7")
-                implementation("${getListOfAdditionalGradle()[1]}:2.8.7")
-                implementation("${getListOfAdditionalGradle()[2]}:1.8.1")
-                implementation("${getListOfAdditionalGradle()[3]}:2.11.0")
-                implementation("${getListOfAdditionalGradle()[4]}:2.11.0")
-            """.trimIndent()
-        } else {
-            """
-                implementation "${getListOfAdditionalGradle()[0]}:2.8.7"
-                implementation "${getListOfAdditionalGradle()[1]}:2.8.7"
-                implementation "${getListOfAdditionalGradle()[2]}:1.8.1"
-                implementation "${getListOfAdditionalGradle()[3]}.0"
-                implementation "${getListOfAdditionalGradle()[4]}:2.11.0"
-            """.trimIndent()
+    fun formattingRawStringInfoGradle(isKts: Boolean, gradleName: String, gradleVer: String): String {
+        return when (isKts) {
+            true -> """
+                    implementation("$gradleName:$gradleVer")
+                """.trimIndent()
+
+            else -> """
+                    implementation "$gradleName:$gradleVer"
+                """.trimIndent()
         }
     }
 
@@ -109,6 +111,15 @@ class Main : AnAction() {
            "com.squareup.retrofit2:retrofit",
            "com.squareup.retrofit2:converter-gson"
        )
+    }
+    fun getListOfAdditionalGradleVersion(): List<String> {
+        return listOf(
+            "2.8.7",
+            "2.8.7",
+            "1.8.1",
+            "2.11.0",
+            "2.11.0"
+        )
     }
 }
 
@@ -227,7 +238,12 @@ class SuccessAlertDialog(val gradle: String) : DialogWrapper(true) {
     }
 
     override fun createCenterPanel(): JComponent {
-        val title = "File generated successfully!\n\nWill auto write these to your build.gradle file:"
+        val title = if (gradle.isEmpty()) {
+            "File generated successfully!"
+        } else {
+            "File generated successfully!\n\nWill auto write these to your build.gradle file:"
+        }
+
         val panel = JPanel(BorderLayout())
 
         val textArea = JTextArea(title).apply {

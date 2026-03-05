@@ -4,6 +4,7 @@ import com.intellij.openapi.command.WriteCommandAction
 import com.intellij.openapi.project.Project
 import com.intellij.psi.*
 import com.intellij.psi.PsiDocumentManager.getInstance
+import com.intellij.psi.codeStyle.CodeStyleManager
 import com.intellij.psi.search.GlobalSearchScope
 import com.intellij.psi.search.PsiShortNamesCache
 
@@ -411,16 +412,24 @@ class FileGenerator(
 
             if (classIndex == -1) return@runWriteCommandAction
 
-            val textImport = """
-            import $retrofitInstanceFullName
-            import $repositoryClassFullName
-            import $useCaseClassFullName
-            import $viewModelClassFullName
-            """.trimIndent() + "\n\n"
+            val retrofitImport = "import $retrofitInstanceFullName\n"
 
-            // Insert imports before class
-            document.insertString(classIndex, textImport)
-            psiManager.commitDocument(document)
+            if (!text.contains(retrofitImport.trim())) {
+                document.insertString(classIndex, "$retrofitImport\n")
+                psiManager.commitDocument(document)
+            }
+
+            val remainingImports = """
+                import $repositoryClassFullName
+                import $useCaseClassFullName
+                import $viewModelClassFullName
+        
+            """.trimIndent()
+
+            if (!text.contains(repositoryClassFullName)) {
+                document.insertString(classIndex, "$remainingImports\n")
+                psiManager.commitDocument(document)
+            }
 
             // Re-read updated text
             text = document.text
@@ -430,21 +439,20 @@ class FileGenerator(
             if (braceIndex == -1) return@runWriteCommandAction
 
             val viewModelCode = """
-                
-                   private val ${viewModelClassName.lowercase()} by lazy {
-                       val repository = $repositoryClassName($retrofitInstance.api)
-                       val useCase = $useCaseClassName(repository)
-                       $viewModelClassName(useCase)
-                   }
-            
-            """.trimIndent()
+    private val ${viewModelClassName.replaceFirstChar { it.lowercase() }} by lazy {
+       val repository = $repositoryClassName($retrofitInstance.api)
+       val useCase = $useCaseClassName(repository)
+       $viewModelClassName(useCase)
+    }"""
 
-            // Prevent duplicate injection
-            if (!text.contains("private val ${viewModelClassName.lowercase()} by lazy")) {
-                document.insertString(braceIndex + 1, viewModelCode)
+            if (!text.contains("private val ${viewModelClassName.replaceFirstChar { it.lowercase() }} by lazy")) {
+                document.insertString(braceIndex + 1, "\n$viewModelCode")
             }
 
             psiManager.commitDocument(document)
+
+            // Auto format code (important for indentation)
+            CodeStyleManager.getInstance(project).reformat(psiFile)
         }
     }
 }

@@ -267,9 +267,9 @@ class SuccessAlertDialog(val gradle: String) : DialogWrapper(true) {
 
     override fun createCenterPanel(): JComponent {
         val title = if (gradle.isEmpty()) {
-            "File generated successfully!"
+            "File generated successfully! just sync your build.gradle"
         } else {
-            "File generated successfully!\n\nWill auto write these to your build.gradle file:"
+            "File generated successfully!\n\nWill auto write these to your build.gradle file (just sync your build.gradle)"
         }
 
         val panel = JPanel(BorderLayout())

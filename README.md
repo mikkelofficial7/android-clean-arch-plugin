@@ -4,7 +4,7 @@
 
 See demo video below:
 
-[Demo Video](https://videy.co/v/?id=Jkf9Uo482)
+[![Watch the video](https://img.youtube.com/vi/TfS21PEZI_4/0.jpg)](https://youtu.be/TfS21PEZI_4)
 
 See related article below:
 
